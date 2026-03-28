@@ -50,4 +50,21 @@ All sound is synthesized via Web Audio API in `game.js`. `playTone(freq, dur, ty
 
 - Remote: `https://github.com/Tony3i3/retro-shooter`
 - Branch: `master`
-- Commit and push after every meaningful change. Use descriptive commit messages scoped to what changed (e.g. `feat(enemy): add Exploder type`, `fix(player): clamp position to canvas bounds`).
+
+**Commit and push after every meaningful unit of work** — a new feature, a bug fix, a refactor, or any change the user would want to be able to revert to independently. Never batch unrelated changes into one commit. The goal is that `git log` tells a clear story of the project's evolution and any state can be restored with a single `git checkout`.
+
+Commit message format:
+```
+<type>(<scope>): <short description>
+
+# Examples:
+feat(enemy): add Exploder enemy type with area-of-effect death
+fix(player): clamp position to canvas bounds on all edges
+feat(levels): add level 6 with mixed enemy composition
+fix(ui): correct heart sprite alignment in HUD
+refactor(game): extract collision logic into helper module
+```
+
+Types: `feat`, `fix`, `refactor`, `docs`, `style`.
+
+**Push to `origin/master` immediately after every commit** — do not accumulate local commits. This ensures GitHub always reflects the latest working state.
