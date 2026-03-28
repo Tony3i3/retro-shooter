@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+}
+
+#game-container {
+    position: relative;
+    box-shadow: 0 0 40px #00ff4422, 0 0 80px #00ff4411;
+}
+
+#gameCanvas {
+    display: block;
+    cursor: crosshair;
+    border: 2px solid #1a3a1a;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
